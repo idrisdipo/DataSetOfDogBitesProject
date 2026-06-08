@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="helper.js"></script>
+    <script src="script.js"></script>
+   </head>
+  <body onload="init()">
+    <div id="banner" class="container center">
+      <div style="text-align:center">
+          <h1> Dataset Of Dogbites </h1>
+      </div>
+    </div>
+     <nav class="container">
+      <a href="index.html"> Home </a>
+      <a href="filter.html"> Filter </a>
+      <a href="chart.html"> Charts</a>
+    </nav>
+    <h3 style="display:inline;"> Search By Borough </h3>
+      <input type="text" id="Borough" placeholder="Enter Borough">
+      <a class="button" onclick="filterByBorough()"> Search! </a>
+
+         
+      <hr>
+      
+    <div class="container subbanner">
+        
+   <div style="padding:20px">
+    <div id = "output" class="container"></div>
+  
+    
+      </div>
+      </div>
+    </div>   
+  
+    <div id="footer" class="container center">
+      <h3>WD Lesson 3.7 Practical</h3>
+    </div>  
+  </body>
+</html>
