@@ -1,27 +1,68 @@
-
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>repl.it</title>
+    <title>Dog Bites</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="c3-eb4b9be8.css" rel="stylesheet" type="text/css" />
+    <script src="d3-5.8.2.min-c5268e33.js"></script>
+    <script src="c3.min-d2a1f852.js"></script>
     <script src="helper.js"></script>
-    <script src="script.js"></script>
+    <script src="chart.js"></script>
    </head>
   <body onload="init()">
     <div id="banner" class="container center">
       <div style="text-align:center">
           <h1> Dataset Of Dogbites </h1>
           
-          <input type="text" placeholder="Search">
-          <a class="button" onclick="ByBorough()"> Search! </a>
-
+        
       </div>
     </div>
-   <nav class="container">
+     <nav class="container">
       <a href="index.html"> Home </a>
       <a href="filter.html"> Filter </a>
       <a href="chart.html"> Charts</a>
     </nav>
+
+
+  <body onload="init()">
+    <div id="banner" class="container center">
+      <div style="text-align:center">
+          <h1> Dataset Of Dogbites - Pie Charts</h1>
+      </div>
+    </div>
+    <div class="container subbanner">
+      <div class = "container center"></div>
+         
+        <h3 style= "color :white"> In this Part of our website you can use our Pie Charts to visualize the data from our Dogbites dataset.
+         this helps us understand the amount of dog bites across different areas of the city. 
+          This chart also some of the places we should be careful in since they have the highest percentages.
+           The borough with the most Cases of dog bites is Queens and the lowest amount of dog bites is Staten Island  All of the data is from <a href="https://opendata.cityofnewyork.us/">NYC Open Data.</a></p>
+       </div>
+    </div>
+       <p><span class="highlight"> How to use:</span> Here you can click on this drop down menu. 
+      This menu will give you a few options to choose from when it comes to visuals.
+        you can choose a Pie chart , Bar Graph , or a donut chaped chart!</p>
+    <div class="container">
+   
+
+
+      <select id="chartType" style="width:200px;">
+        <option>Select Chart Type</option>
+        <option value="bar">Bar</option>
+        <option value="pie">Pie</option>
+        <option value="donut">Donut</option>
+      </select>
+      <a class="button" onclick="chartByBorough()"> Display </a>
+    </div>
+    <div class="container subbanner"><br></div>
+    <div id="output"></div>
+    
+    <div id="footer" class="container center">
+      <a href="https://data.cityofnewyork.us/resource/rsgh-akpg.json">API</a> | 
+      <a href="https://data.cityofnewyork.us/Health/DOHMH-Dog-Bite-Data/rsgh-akpg/about_data">About This Data set </a>
+     
+    </div>  
+  </body>
